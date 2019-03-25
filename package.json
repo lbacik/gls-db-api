@@ -1,0 +1,32 @@
+{
+  "name": "@lbacik/gls-db-api",
+  "version": "0.1.0",
+  "author": "Łukasz Bacik <mail@luka.sh> (http://luka.sh)",
+  "license": "LGPL-2.1-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lbacik/gls-db-api.git"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "firebase": "^5.8.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "files": [
+    "/src",
+    "/dist",
+    ".eslintrc.yml",
+    "LICENSE",
+    "package.json",
+    "package-lock.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "node_modules/.bin/nodemon app.js"
+  }
+}
