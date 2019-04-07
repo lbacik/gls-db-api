@@ -2,13 +2,12 @@
 const firebase = require('firebase')
 const RepositoryInterface = require('../gls-api/repository-interface')
 
-class FirebaseRepository extends RepositoryInterface
-{
+class FirebaseRepository extends RepositoryInterface {
   constructor(databaseUrl, apiKey) {
     super()
     firebase
       .initializeApp({
-        apiKey: apiKey,
+        apiKey,
         databaseURL: databaseUrl,
       })
     this.db = firebase.database()
@@ -32,7 +31,7 @@ class FirebaseRepository extends RepositoryInterface
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .catch(function(error) {
+      .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(`${errorCode}, ${errorMessage}`)

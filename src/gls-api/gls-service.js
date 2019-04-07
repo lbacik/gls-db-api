@@ -1,6 +1,5 @@
 
 class GlsService {
-
   constructor(repository) {
     this.repository = repository
   }
@@ -17,7 +16,7 @@ class GlsService {
   }
 
   add(email, password, key, data) {
-    const newEntry = {[key]: JSON.parse(data)}
+    const newEntry = { [key]: JSON.parse(data) }
     return this.repository
       .add(email, password, newEntry)
   }

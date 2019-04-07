@@ -1,6 +1,5 @@
 
-module.exports = function(app, glsService) {
-
+module.exports = function (app, glsService) {
   app.get('/list', (req, res) => {
     glsService.list()
       .then(data => res.json(data).end())
@@ -17,6 +16,6 @@ module.exports = function(app, glsService) {
     const email = req.body.email
     const password = req.body.password
     glsService.add(email, password, name, data)
-      .then(data => res.json(data).end())
+      .then(result => res.json(result).end())
   })
 }
