@@ -7,7 +7,7 @@ class GlsService {
   list() {
     return this.repository
       .list()
-      .then(data => Object.keys(data))
+      .then(data => data.map(element => element.name))
   }
 
   get(name) {

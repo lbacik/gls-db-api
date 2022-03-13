@@ -1,4 +1,4 @@
-FROM node:11-alpine
+FROM node:17-alpine
 
 COPY . /project
 WORKDIR /project
